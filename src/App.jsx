@@ -18,17 +18,24 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import { GetBalance } from "./GetBalance";
 import { SignMessage } from "./SignMessage";
 import { SendSol } from "./SendSol";
-
+import "./App.css";
 function App() {
     return (
-        <ConnectionProvider endpoint={"https://solana-devnet.g.alchemy.com/v2/pBONsoRb7HTNHg3W5rZ3Hvn4Tcg2jCE0"}>
+        <div className="background">
+        <ConnectionProvider
+            endpoint={
+                "https://solana-devnet.g.alchemy.com/v2/pBONsoRb7HTNHg3W5rZ3Hvn4Tcg2jCE0"
+            }
+        >   
+            <div className="heading">
+                        <h1>SOL Faucet</h1>
+            </div>
             <WalletProvider wallets={[]} autoConnect>
                 <WalletModalProvider>
-                  <WalletMultiButton />
-                  <WalletDisconnectButton />
-                    <>
-                        <div>hi there</div>
-                    </>
+                    <div className="wallet-buttons">
+                        <WalletMultiButton />
+                        <WalletDisconnectButton />
+                    </div>
                     <Airdrop />
                     <GetBalance />
                     <SignMessage />
@@ -36,6 +43,7 @@ function App() {
                 </WalletModalProvider>
             </WalletProvider>
         </ConnectionProvider>
+        </div>
     );
 }
 

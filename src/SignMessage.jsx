@@ -19,14 +19,15 @@ export function SignMessage() {
         alert("success", `Message signature: ${bs58.encode(signature)}`);
     }
     return (
-        <div>
+        <div className="container">
             <input
                 type="text"
                 name=""
                 id="message"
                 placeholder="Enter message"
+                className='input-box'
             />
-            <button onClick={onClick}>Sign message</button>
+            <button className="component-button" onClick={onClick}>Sign message</button>
         </div>
     );
 }

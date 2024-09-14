@@ -19,12 +19,13 @@ export function SendSol() {
         await wallet.sendTransaction(transaction, connection);
         alert("Sent "+amount+ "SOL to "+to);
     };
-    return(
-        <div>
-            <p>Send Sol</p>
-            <input type="text" name="" id="toKey" placeholder="Enter Public key" />
-            <input type="text" name="" id="amount" placeholder="Enter Amount" />
-            <button  onClick={sendSolana}>Send SOL</button>
-        </div>
+    return(<>
+            <p>Send SOL</p>
+            <div className="container" >
+                <input className='input-box' type="text" name="" id="toKey" placeholder="Enter Public key" />
+                <input className='input-box' type="text" name="" id="amount" placeholder="Enter Amount" />
+                <button className="component-button" onClick={sendSolana}>Send SOL</button>
+            </div>
+            </>
     )
 };

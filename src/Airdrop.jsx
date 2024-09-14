@@ -9,10 +9,10 @@ export function Airdrop() {
         alert("Airdrop sent");
     }
     return (
-        <div>
+        <div className="container">
             {/* Hi mr {wallet.publicKey.toString()} */}
-            <input id="publickey" type="text" placeholder="amount" />
-            <button onClick={sendAirdropToUser}>Request Airdrop</button>
+            <input className='input-box' id="publickey" type="text" placeholder="Enter Amount" />
+            <button className="component-button" onClick={sendAirdropToUser}>Request Airdrop</button>
         </div>
     );
 }

@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    background-image: radial-gradient(
+        ellipse 80% 80% at 50% -20%, 
+        rgba(120, 119, 198, 0.3), 
+        rgba(255, 255, 255, 0)
+    );
+    color: #fff;
+}
+
+.wallet-buttons {
+    display: flex;
+    gap: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #2a2a2a;  /* Changed to a solid, slightly lighter background */
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.input-box input {
+    background: transparent;
+    border: none;
+    color: #fff;  /* Ensure text color is white */
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);  /* Placeholder color */
+}
+
+.input-box:hover {
+    background: #333333;  /* Slightly darker on hover for contrast */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-box input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 53, 229, 0.5);  /* Blue glow on focus */
+}
+
+.input-box input:not(:placeholder-shown) {
+    background: transparent;
+}
+
+/* Ensure text color */
+.input-box input,
+.input-box input:focus,
+.input-box input:not(:placeholder-shown) {
+    color: #fff;  /* Ensure text stays white */
+    -webkit-text-fill-color: #fff;  /* For Safari compatibility */
+    text-fill-color: #fff;
+}
+
+.component-button {
+    background-color: #1e35e5cf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.component-button:hover {
+    background-color: #1565c0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
